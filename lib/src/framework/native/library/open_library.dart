@@ -88,7 +88,7 @@ mixin OpenLibrary {
     } else {
       _strategies
         ..add(OpenViaEnvVarStrategy())
-        ..add(OpenViaPackageRelativeStrategy())
+        //..add(OpenViaPackageRelativeStrategy())
         ..add(OpenViaScriptRelativeStrategy())
         ..add(OpenViaOsResolutionStrategy(defaultLibraryFileName));
     }
