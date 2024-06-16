@@ -1,4 +1,3 @@
-import 'dart:cli' as cli;
 import 'dart:ffi';
 import 'dart:isolate' show Isolate;
 
@@ -52,8 +51,7 @@ class OpenViaPackageRelativeStrategy extends OpenLibraryStrategy {
     const timeoutSeconds = 5;
     final libraryUri = Uri.parse(packagePath);
     final packageUriFuture = Isolate.resolvePackageUri(libraryUri);
-    final packageUri = cli.waitFor(packageUriFuture,
-        timeout: const Duration(seconds: timeoutSeconds));
+    final packageUri = await packageUriFuture.timeout(const Duration(seconds: timeoutSeconds));
     return packageUri;
   }
 }
