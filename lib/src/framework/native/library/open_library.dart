@@ -9,8 +9,8 @@ import 'envvar_strategy.dart';
 import 'open_library_strategy.dart';
 import 'os_resolution_strategy.dart';
 import 'script_relative_strategy.dart';
-import 'stubs/package_relative_strategy.dart'
-    if (dart.library.cli) 'package_relative_strategy.dart';
+//import 'stubs/package_relative_strategy.dart'
+//    if (dart.library.cli) 'package_relative_strategy.dart';
 
 /// Its expected that internal libraries are prefixed with es
 /// This is also referenced in CMakeLists.txt file in
